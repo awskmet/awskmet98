@@ -30,14 +30,17 @@ public class TreasureHunter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)){
             this.gameObject.GetComponent<Inventory>().setInv(0, (GameObject.Find("Hunted1").GetComponent<Collectable>()));
+        Debug.Log("1");
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2)){
             this.gameObject.GetComponent<Inventory>().setInv(1, (GameObject.Find("Hunted2").GetComponent<Collectable>()));
+        Debug.Log("2");
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha3)){
             this.gameObject.GetComponent<Inventory>().setInv(2, (GameObject.Find("Hunted3").GetComponent<Collectable>()));
+        Debug.Log("3");
         }
 
          if (Input.GetKeyDown(KeyCode.Alpha4)){
@@ -45,6 +48,7 @@ public class TreasureHunter : MonoBehaviour
             int tScore=currentTotalScore;
             int tTreas=currentTotalTreasures;
             GameObject.Find("ScoreMessage").GetComponent<TextMesh>().text=("Anthony Doban\n"+"score = "+tScore+"\ncount = "+tTreas+" treasures");
+        Debug.Log("4");
     }
          if (CalculateScore()==111){
             GameObject.Find("WinMessage").GetComponent<TextMesh>().text=("you win");  //make it so u can keep playing
@@ -72,3 +76,4 @@ public class TreasureHunter : MonoBehaviour
     }
     
 }
+
